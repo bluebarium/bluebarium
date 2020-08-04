@@ -12,7 +12,6 @@
 <link rel="manifest" href="site.webmanifest">
 <link rel="apple-touch-icon" href="icon.png">
 <!-- Place favicon.ico in the root directory -->
-
 <link rel="stylesheet" href="css/normalize.css">
 <link rel="stylesheet" href="css/main.css">
 <meta name="theme-color" content="#fafafa">
@@ -21,14 +20,22 @@
 @media only screen and (max-width: 600px) {
 .header {
     height: 130px;
-    font-size: 42px;
+    font-size: 30px;
 }
-.support {
-    font-size: 32px;
-    height: 65px;
-}
+
 .onelevelsection {
-    font-size: 25px;
+    font-size: 20px;
+}
+iframe {
+    width: 280;
+    height: 160;
+}
+.videos {
+    display: flex;
+    flex-direction: column;
+}
+.videos > div {
+    margin: 15px;
 }
 }
 
@@ -38,12 +45,20 @@
     height: 150px;
     font-size: 50px;
 }
-.support {
-    font-size: 35px;
-    height: 75px;
-}
+
 .onelevelsection {
     font-size: 25px;
+}
+iframe {
+    width: 280;
+    height: 160;
+}
+.videos {
+    display: flex;
+    flex-direction: column;
+}
+.videos > div {
+    margin: 15px;
 }
 }
 
@@ -53,42 +68,73 @@
     height: 150px;
     font-size: 50px;
 }
-.support {
-    font-size: 35px;
-    height: 75px;
-}
+
 .onelevelsection {
     font-size: 25px;
+}
+iframe {
+    width: 280;
+    height: 160;
+}
+.videos {
+    display: flex;
+    flex-direction: column;
+}
+.videos > div {
+    margin: 15px;
 }
 }
 
 /* Large devices (laptops/desktops, 992px and up) */
 @media only screen and (min-width: 992px) {
+    
+    .main {
+        height: 1080px;
+    }
 .header {
     height: 180px;
     font-size: 60px;
 }
-.support {
-    font-size: 40px;
-    height: 90px;
-}
 .onelevelsection {
     font-size: 30px;
+}
+iframe {
+    width: 420;
+    height: 240;
+}
+.videos {
+    display: flex;
+    flex-direction: column;
+}
+.videos > div {
+    margin: 15px;
 }
 }
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 @media only screen and (min-width: 1200px) {
+    
+    .main {
+        height: 1420px;
+    }
+    
 .header {
     height: 180px;
     font-size: 75px;
 }
-.support {
-    font-size: 45px;
-    height: 90px;
-}
 .onelevelsection {
     font-size: 30px;
+}
+iframe {
+    width: 420;
+    height: 240;
+}
+.videos {
+    display: flex;
+    flex-direction: column;
+}
+.videos > div {
+    margin: 15px;
 }
 }
 .header {
@@ -109,8 +155,9 @@
     font-family: Arial, Helvetica, sans-serif;
     font-style: normal;
     display: flex;
+    flex: 1;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
 }
 }
@@ -118,28 +165,62 @@
     font-family: Arial, Helvetica, sans-serif;
     font-style: normal;
 }
+/* unvisited link */
+a:link {
+    color: #CCC7BC;
+}
+/* visited link */
+a:visited {
+    color: #CCC7BC;
+}
+/* mouse over link */
+a:hover {
+    color: #CCC7BC;
+}
+/* selected link */
+a:active {
+    color: #CCC7BC;
+}
 </style>
 </head>
-
 <body>
 <div class="header">Alice in Wonderland</div>
-<div class="main"> <br>
-  <br>
-  <br>
-  <div class="support">SUPPORT</div>
+<div class="main">
+    <br>
+  
   <div class="onelevelsection">Video Tutorials</div>
+  <br>
+
+  <div class="videos">
+    <div>
+      <iframe src="https://www.youtube.com/embed/MSmZLYgquN4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+    <div>
+      <iframe src="https://www.youtube.com/embed/MSmZLYgquN4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+    <div>
+      <iframe src="https://www.youtube.com/embed/MSmZLYgquN4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+  </div>
+  <br>
+  <br>
   <div class="onelevelsection">Contact Us</div>
   <br>
+  <br>
+  <span>We are eager to hear from you</span> <br>
+  <address>
+  <a href="mailto:support@bluebarium.com?subject=Regarding Alice in Wonderland App">support@bluebarium.com</a><br>
+  </address>
+  <br>
 </div>
-<script src="js/vendor/modernizr-3.11.2.min.js"></script> 
-<script src="js/plugins.js"></script> 
-<script src="js/main.js"></script> 
-
-<!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. --> 
+<script src="js/vendor/modernizr-3.11.2.min.js"></script>
+<script src="js/plugins.js"></script>
+<script src="js/main.js"></script>
+<!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
 <script>
     window.ga = function () { ga.q.push(arguments) }; ga.q = []; ga.l = +new Date;
     ga('create', 'UA-XXXXX-Y', 'auto'); ga('set', 'anonymizeIp', true); ga('set', 'transport', 'beacon'); ga('send', 'pageview')
-  </script> 
+  </script>
 <script src="https://www.google-analytics.com/analytics.js" async></script>
 </body>
 </html>
